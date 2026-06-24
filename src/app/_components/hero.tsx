@@ -150,12 +150,25 @@ export function Hero() {
             ref={socialMediaBtn}
             className="md:relative md:text-end md:flex md:flex-col md:gap-2 md:text-[rgba(255,255,255,0.8)] md:text-[16px] md:mt-20 hidden"
           >
-            <a href="#">/ Instagram</a>
-            <a href="#">/ WhatsApp</a>
+            <a href="https://www.instagram.com/agencia_devlup/" target="_blank">
+              / Instagram
+            </a>
+            <a
+              href="https://wa.me/5531996259145?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20para%20o%20desenvolvimento%20de%20uma%20landing%20page."
+              target="_blank"
+            >
+              / WhatsApp
+            </a>
           </div>
         </div>
         <div className="relative z-10 flex flex-col mt-10 justify-center items-center gap-4 md:flex-row md:mt-20">
           <button
+            onClick={() =>
+              window.open(
+                "https://wa.me/5531996259145?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20para%20o%20desenvolvimento%20de%20uma%20landing%20page.",
+                "_blank",
+              )
+            }
             ref={btnBudget}
             className="bg-[#FF6B01] cursor-pointer py-3 w-fit pl-6 pr-3 rounded-full flex items-center gap-4 text-[rgba(255,255,255,0.8)]"
           >
@@ -169,6 +182,12 @@ export function Hero() {
             />
           </button>
           <button
+            onClick={() =>
+              window.open(
+                "https://wa.me/5531996259145?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seus%20serviços.",
+                "_blank",
+              )
+            }
             ref={btnContact}
             className="bg-[rgba(22,9,0,0.6)] border border-[rgba(255,255,255,0.09)] cursor-pointer w-fit py-3 pl-6 pr-3 rounded-full flex items-center gap-4 text-[rgba(255,255,255,0.8)]"
           >

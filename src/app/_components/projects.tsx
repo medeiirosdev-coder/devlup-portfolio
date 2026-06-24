@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import apaepl from "../../../public/images/apaepl.webp";
 import devlup from "../../../public/images/devlup.png";
+import irmaoanimal from "../../../public/images/projetoirmaoanimal.png";
 import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -131,7 +132,7 @@ export function Projects() {
         endTrigger: "#footer",
         end: "top top",
         pin: true,
-        pinSpacing: false,  
+        pinSpacing: false,
       });
     });
 
@@ -163,6 +164,11 @@ export function Projects() {
         />
         <Image
           src={devlup}
+          alt="Projeto 1"
+          className="project-img object-cover w-full"
+        />
+        <Image
+          src={irmaoanimal}
           alt="Projeto 1"
           className="project-img object-cover w-full"
         />
