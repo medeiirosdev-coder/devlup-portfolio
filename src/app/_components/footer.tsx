@@ -3,14 +3,17 @@ import wppIcon from "../../../public/images/wpp-icon.png";
 import Image from "next/image";
 export function Footer() {
   return (
-    <footer className="flex flex-col justify-end font-clash overflow-hidden pt-26 relative h-screen px-10">
+    <footer
+      id="footer"
+      className=" flex flex-col justify-end font-clash overflow-hidden pt-26 relative z-20 h-screen px-10"
+    >
       <video
         src="/videos/footer_video.mp4"
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-3 z-0"
+        className="absolute inset-0 w-full h-full object-cover  z-0"
       ></video>
       <div className="text-center md:text-start mb-40 z-10 relative grid grid-cols-1 md:grid-cols-2 ">
         <div className="md:order-2">

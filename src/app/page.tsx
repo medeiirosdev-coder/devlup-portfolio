@@ -4,7 +4,7 @@ import { Projects } from "./_components/projects";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
       <Hero />
       <Projects />
       <Footer />
