@@ -4,10 +4,11 @@ import SplitType from "split-type";
 import Image from "next/image";
 import budgetIcon from "../../../public/images/orcamento.png";
 import wppIcon from "../../../public/images/wpp-icon.png";
-import logo from "../../../public/images/logo_devlup.webp";
-import { useEffect, useRef } from "react";
+import heroBg from '../../../public/images/bg_1.webp'
+import { useEffect, useRef, useState } from "react";
 
 export function Hero() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const titleRef = useRef(null);
   const btnBudget = useRef(null);
   const btnContact = useRef(null);
@@ -102,14 +103,19 @@ export function Hero() {
     };
   }, []);
 
+
   return (
-    <section className="overflow-hidden py-16 px-10 font-clash bg-[url('/images/bg-hero-mobile.webp')] bg-cover bg-no-repeat bg-center md:bg-[url('/images/bg-hero-nowolf.webp')] md:bg-cover md:bg-center md:bg-no-repeat h-screen">
-      <div className="relative ">
-        <Image
-          src={logo}
-          alt="Logo DEVLUP"
-          className="md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2 md:z-1 md:opacity-50 md:block hidden"
-        />
+    <section className="relative overflow-hidden py-16 px-10 font-clash md:bg-cover md:bg-center md:bg-no-repeat h-screen">
+      <div className="mediaBackground w-full h-full object-cover absolute object-center inset-0">
+        <video src="/videos/hero_video.mp4" autoPlay muted loop playsInline preload="auto"  onCanPlayThrough={() => setVideoLoaded(true)}
+      className={`absolute h-full w-full object-cover transition-opacity duration-700 ${
+        videoLoaded ? "opacity-20" : "opacity-0"
+      }`}/>
+        <Image src={heroBg} alt="heroBackground" fill quality={100} className={`object-cover transition-opacity duration-700 ${
+        videoLoaded ? "opacity-0" : "opacity-100"
+      }`}/>
+       </div>
+      <div className="relative">
         <h2
           id="headerTxt"
           className="text-white text-center text-[24px] md:text-[44px]"
